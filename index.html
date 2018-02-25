@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TSH Recruitment Task by Matthew Major</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+    
+    <meta name="author" content="Mateusz Major">
+    <meta name="robots" content="noindex">
+
+  
+  	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+  	<link href="css/fontello.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+  
+</head>
+<body>
+<div class="outter-wrapper">
+  	<div class="inner-wrapper">
+  	
+  	<main class="container form_bg_surround">
+  		<div class="form_bg_base">
+  		
+  			<!--Beautiful header -->
+  			<header class="form_bg_base_header text-center">
+				<h1>Where your money goes</h1>
+				<p>Payments made by Chichester District Council to individual suppliers with a value over £500 made within October.</p>
+			</header>
+			
+			<!--Form. As U can see-->	
+			<form class="row" id="form">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<input type="text" id="query" name="query" placeholder="Search suppliers">
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="btn selectbox">
+						<select id="rating" name="rating">
+							<option value="0">Select pound rating</option>
+							<option value="1">Pound rating: 1</option>
+							<option value="2">Pound rating: 2</option>
+							<option value="3">Pound rating: 3</option>
+							<option value="4">Pound rating: 4</option>
+							<option value="5">Pound rating: 5</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<button type="reset" class="btn btn-reset" onclick="resetform();" />Reset</button><button type="submit" class="btn btn-primary" />Search</button>
+				</div>
+			</form>
+			  
+			<!--Now here starts the magic-->	  
+			<section class="content">
+				<header>
+					<div class="row">
+						<div class="col-lg-5 col-md-4 col-sm-6 order-md-1 order-sm-1">Supplier <span class="invisible">Listing</span></div>
+						<div class="col-lg-3 col-md-4 col-sm-6 order-md-2 order-sm-3">Pound Rating</div>
+						<div class="col-lg-2 col-md-2 col-sm-6 col-6 order-md-3 order-sm-2">Reference</div>
+						<div class="col-lg-2 col-md-2 col-sm-6 col-6 order-md-4 order-sm-4">Value</div>
+					</div>
+				</header>
+				<section id="data"><figure class="sys-alert preloader"><div class="inner">
+
+					<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+						<path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+						s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+						c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+						<path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+						C22.32,8.481,24.301,9.057,26.013,10.047z">
+					<animatetransform attributeType="xml"
+						attributeName="transform"
+						type="rotate"
+						from="0 20 20"
+						to="360 20 20"
+						dur="0.65s"
+					repeatCount="indefinite"/>
+					</path>
+					</svg>
+			  
+				<p>Please wait...</p></div></figure></section>
+			</section>
+
+			<!--And last but not least - Pagination -->	  
+			<section class="pagination">
+				<ul id="pagination">
+					<li class="prev" data-url=""><i class="icon-left-open"></i></li><li><ul class="list-inline"></ul></li><li class="next" data-url=""><i class="icon-right-open"></i></li>
+				</ul>
+			</section>
+  		</div>
+  	</main>	
+	
+  </div>
+</div>
+<div class="outter-wrapper modal-wrapper">
+  	<div class="inner-wrapper">
+  		<main class="container modal-body">
+  			<div class="table">
+  				<div class="table-cell">
+					<h2>Test</h2>
+					<div class="row" id="modal-data">
+						<div class="col-sm-4"><div></div>Pound Rating</div>
+						<div class="col-sm-4 col-6"><h3></h3>Reference</div>
+						<div class="col-sm-4 col-6"><h3></h3>Value</div>
+					</div>
+				</div>
+			</div>
+			<button id="close" class="btn">zamknij</button>
+		</main>
+	</div>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" ></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

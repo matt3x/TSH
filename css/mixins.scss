@@ -1,0 +1,206 @@
+$md: 991px;
+
+$max-md: "(max-width: 991px)";
+$min-md: "(min-width: 991px)";
+$max-sm: "(max-width: 767px)";
+$min-sm: "(min-width: 767px)";
+$max-xs: "(max-width: 576px)";
+$min-xs: "(min-width: 576px)";
+
+@mixin media-max-md {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin media-min-md {
+  @media only screen and (min-width: 991px) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin nonselectable{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+@mixin noappearance{
+	outline: none!important;
+	-webkit-appearance: none; 
+}
+
+@mixin border-radius($value){
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+
+@mixin border-radius-detailed($top_right, $bottom_right, $bottom_left, $top_left){
+	-webkit-border-top-right-radius: $top_right;
+	-webkit-border-bottom-right-radius: $bottom_right;
+	-webkit-border-bottom-left-radius: $bottom_left;
+	-webkit-border-top-left-radius: $top_left;
+
+	-moz-border-radius-topright: $top_right;
+	-moz-border-radius-bottomright: $bottom_right;
+	-moz-border-radius-bottomleft: $bottom_left;
+	-moz-border-radius-topleft: $top_left;
+
+	border-top-right-radius: $top_right;
+	border-bottom-right-radius: $bottom_right;
+	border-bottom-left-radius: $bottom_left;
+	border-top-left-radius: $top_left;
+}
+
+@mixin box-shadow($value...){
+	-webkit-box-shadow: $value;
+	-moz-box-shadow: $value;
+	box-shadow: $value;	
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
+}
+
+/* Theres no other gradient direction so I do not bother of its unchangable degree value */
+/* First color is for browser that don't support gradinets, why? start is too light, stop is too dark, the right spot is somewhere in the middle */
+@mixin background($solidcolor, $startcolor, $stopcolor){
+	background-color: $solidcolor;
+	background-image: -moz-linear-gradient( $startcolor 0%, $stopcolor 100%);
+	background-image: -webkit-linear-gradient( $startcolor 0%, $stopcolor 100%);
+	background-image: -ms-linear-gradient( $startcolor 0%, $stopcolor 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startcolor}', endColorstr='#{$stopcolor}');
+}
+
+@mixin rating {
+	ul.rating {
+		display: block;
+		list-style-type: none;
+		padding: 0px;
+		margin: 0;
+		li {
+			display: inline-block;
+			width: 26px; 
+			height: 26px; 
+			margin-right: 2px;
+			@include border-radius(100%);
+			line-height: 26px;
+			text-align: center;
+			font-size: 15px;
+			/* Should be font weight 900 - Black - why isnt? Because I dont want to slow loading time for font weight used only once */
+			font-weight: 600;
+			@include background(RGB(242, 242, 242), RGB(255, 255, 255), RGB(218, 220, 220));
+			@include box-shadow(0px 1px 1px 0px rgba(0, 0, 0, 0.15),inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004));
+			color: rgb(102, 102, 102);
+			border: solid 1px RGB(138, 138, 138);
+			border-right-color: RGB(128, 128, 128);
+			border-left-color: RGB(128, 128, 128);
+			border-bottom-color: RGB(118, 118, 118);
+		}
+		&.rated-1 li:nth-child(-n+1), &.rated-2 li:nth-child(-n+2), &.rated-3 li:nth-child(-n+3), &.rated-4 li:nth-child(-n+4), &.rated-5 li:nth-child(-n+5) {
+			@include background(RGB(97, 180, 228),  RGB(106, 193, 232), RGB(82, 154, 218));
+			@include box-shadow(0px 1px 1px 0px rgba(81, 153, 218, 0.15),inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05));
+			color: rgb(253, 253, 253);
+			text-align: center;
+		}
+	}
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($value) {
+  -webkit-animation: #{$value};
+  -moz-animation: #{$value};
+  -ms-animation: #{$value};
+  -o-animation: #{$value};
+  animation: #{$value};      
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin bootstrap-col-overrides ($media-query, $value) {
+	@media only screen and (min-width: $media-query) {
+		flex: 0 0 $value;
+		-ms-flex: 0 0 $value;
+		-webkit-flex: 0 0 $value;
+		max-width: $value;
+	}
+}
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// scale
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+// translate
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin transition($value...){
+	-webkit-transition: $value;
+	-moz-transition: $value;
+	-o-transition: $value;
+	transition: $value;
+}
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}

@@ -1,0 +1,460 @@
+/*
+ by Mateusz Major
+*/
+/* Theres no other gradient direction so I do not bother of its unchangable degree value */
+/* First color is for browser that don't support gradinets, why? start is too light, stop is too dark, the right spot is somewhere in the middle */
+/* line 8, modal.scss */
+body .outter-wrapper {
+  -webkit-transition: background 0.1s ease-in-out;
+  -moz-transition: background 0.1s ease-in-out;
+  -o-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out; }
+  /* line 10, modal.scss */
+  body .outter-wrapper.modal-wrapper {
+    display: none; }
+  /* line 14, modal.scss */
+  body .outter-wrapper .inner-wrapper main.form_bg_surround {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.05s ease-in-out;
+    -moz-transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.05s ease-in-out;
+    -o-transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.05s ease-in-out;
+    transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.05s ease-in-out; }
+@media (max-width: 991px) {
+  /* line 21, modal.scss */
+  body.modal-open .outter-wrapper {
+    background: rgba(0, 0, 0, 0.6);
+    -moz-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s; } }
+/* line 27, modal.scss */
+body.modal-open .outter-wrapper:not(.modal-wrapper) {
+  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out; }
+  @media (min-width: 991px) {
+    /* line 27, modal.scss */
+    body.modal-open .outter-wrapper:not(.modal-wrapper) {
+      background: rgba(0, 0, 0, 0.7);
+      -moz-transition-delay: 0.1s;
+      -o-transition-delay: 0.1s;
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s; } }
+  @media (max-width: 991px) {
+    /* line 34, modal.scss */
+    body.modal-open .outter-wrapper:not(.modal-wrapper) .inner-wrapper main.form_bg_surround {
+      opacity: 0.25;
+      filter: alpha(opacity=25);
+      -webkit-transition: opacity 0.4s ease-in-out;
+      -moz-transition: opacity 0.4s ease-in-out;
+      -o-transition: opacity 0.4s ease-in-out;
+      transition: opacity 0.4s ease-in-out; } }
+  @media (min-width: 991px) {
+    /* line 34, modal.scss */
+    body.modal-open .outter-wrapper:not(.modal-wrapper) .inner-wrapper main.form_bg_surround {
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+      -webkit-transition: transform 0.35s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.4s ease-in-out;
+      -moz-transition: transform 0.35s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.4s ease-in-out;
+      -o-transition: transform 0.35s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.4s ease-in-out;
+      transition: transform 0.35s cubic-bezier(0.17, 0.67, 0.39, 0.9), opacity 0.4s ease-in-out; } }
+/* line 47, modal.scss */
+body.modal-open .outter-wrapper.modal-wrapper {
+  display: table;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
+  cursor: pointer; }
+  /* line 58, modal.scss */
+  body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper {
+    vertical-align: middle; }
+    /* line 60, modal.scss */
+    body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body {
+      max-width: 830px;
+      background: #fff;
+      min-height: 420px;
+      margin-top: 250px;
+      padding: 25px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.55);
+      -moz-box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.55);
+      box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-animation: modalIn .3s cubic-bezier(.17,.67,.39,.9) forwards;
+      -moz-animation: modalIn .3s cubic-bezier(.17,.67,.39,.9) forwards;
+      -ms-animation: modalIn .3s cubic-bezier(.17,.67,.39,.9) forwards;
+      -o-animation: modalIn .3s cubic-bezier(.17,.67,.39,.9) forwards;
+      animation: modalIn .3s cubic-bezier(.17,.67,.39,.9) forwards;
+      text-align: center; }
+      @media (max-width: 991px) {
+        /* line 60, modal.scss */
+        body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body {
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+          padding-top: 20px;
+          min-height: 200px;
+          margin: 150px auto 0;
+          width: calc(100% - 40px);
+          max-width: 700px; } }
+      /* line 79, modal.scss */
+      body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table {
+        display: table;
+        height: 300px;
+        width: 100%; }
+        @media (max-width: 991px) {
+          /* line 79, modal.scss */
+          body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table {
+            height: auto;
+            min-height: 0px; } }
+        /* line 87, modal.scss */
+        body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell {
+          display: table-cell;
+          height: 100%;
+          width: 100%;
+          vertical-align: middle; }
+          @media (max-width: 576px) {
+            /* line 87, modal.scss */
+            body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell {
+              vertical-align: top;
+              height: auto; } }
+          /* line 96, modal.scss */
+          body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell h2 {
+            font-size: 36px;
+            font-family: "Source Sans Pro";
+            font-weight: 300;
+            color: #2288b7;
+            padding: 30px 0; }
+            @media (max-width: 991px) {
+              /* line 96, modal.scss */
+              body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell h2 {
+                font-size: 26px;
+                padding: 20px 0; } }
+          /* line 107, modal.scss */
+          body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data {
+            color: #666666;
+            max-width: 600px;
+            margin: 0 auto; }
+            /* line 113, modal.scss */
+            body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data div[class^='col']:nth-child(1) > div {
+              line-height: 31px;
+              height: 31px; }
+            @media (max-width: 576px) {
+              /* line 112, modal.scss */
+              body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data div[class^='col']:nth-child(1) {
+                border-top: solid 1px #e0e0e0;
+                padding-top: 15px;
+                border-bottom: solid 1px #e0e0e0;
+                padding-bottom: 10px;
+                margin-bottom: 10px; } }
+            /* line 125, modal.scss */
+            body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data div[class^='col']:nth-child(2) {
+              border-left: solid 1px #e0e0e0;
+              border-right: solid 1px #e0e0e0; }
+              @media (max-width: 576px) {
+                /* line 125, modal.scss */
+                body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data div[class^='col']:nth-child(2) {
+                  border-left: none;
+                  border-right: none; } }
+            /* line 104, mixins.scss */
+            body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating {
+              display: block;
+              list-style-type: none;
+              padding: 0px;
+              margin: 0; }
+              /* line 109, mixins.scss */
+              body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating li {
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                margin-right: 2px;
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
+                border-radius: 100%;
+                line-height: 26px;
+                text-align: center;
+                font-size: 15px;
+                /* Should be font weight 900 - Black - why isnt? Because I dont want to slow loading time for font weight used only once */
+                font-weight: 600;
+                background-color: RGB(242, 242, 242);
+                background-image: -moz-linear-gradient(RGB(255, 255, 255) 0%, RGB(218, 220, 220) 100%);
+                background-image: -webkit-linear-gradient(RGB(255, 255, 255) 0%, RGB(218, 220, 220) 100%);
+                background-image: -ms-linear-gradient(RGB(255, 255, 255) 0%, RGB(218, 220, 220) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(255, 255, 255)', endColorstr='RGB(218, 220, 220)');
+                -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+                -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+                box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+                color: #666666;
+                border: solid 1px RGB(138, 138, 138);
+                border-right-color: RGB(128, 128, 128);
+                border-left-color: RGB(128, 128, 128);
+                border-bottom-color: RGB(118, 118, 118); }
+              /* line 128, mixins.scss */
+              body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating.rated-1 li:nth-child(-n+1), body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating.rated-2 li:nth-child(-n+2), body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating.rated-3 li:nth-child(-n+3), body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating.rated-4 li:nth-child(-n+4), body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data ul.rating.rated-5 li:nth-child(-n+5) {
+                background-color: RGB(97, 180, 228);
+                background-image: -moz-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                background-image: -webkit-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                background-image: -ms-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(106, 193, 232)', endColorstr='RGB(82, 154, 218)');
+                -webkit-box-shadow: 0px 1px 1px 0px rgba(81, 153, 218, 0.15), inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05);
+                -moz-box-shadow: 0px 1px 1px 0px rgba(81, 153, 218, 0.15), inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05);
+                box-shadow: 0px 1px 1px 0px rgba(81, 153, 218, 0.15), inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05);
+                color: #fdfdfd;
+                text-align: center; }
+            /* line 135, modal.scss */
+            body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .table .table-cell #modal-data h3 {
+              font-family: "Source Sans Pro";
+              font-weight: 400;
+              color: #3b3b3b; }
+      /* line 143, modal.scss */
+      body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .btn {
+        width: 100px;
+        height: 30px;
+        padding: 0 15px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background-color: RGB(215, 215, 215);
+        background-image: -moz-linear-gradient(RGB(242, 242, 242) 0%, RGB(196, 196, 196) 100%);
+        background-image: -webkit-linear-gradient(RGB(242, 242, 242) 0%, RGB(196, 196, 196) 100%);
+        background-image: -ms-linear-gradient(RGB(242, 242, 242) 0%, RGB(196, 196, 196) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(242, 242, 242)', endColorstr='RGB(196, 196, 196)');
+        line-height: 30px;
+        text-align: center;
+        border: none;
+        color: #494949;
+        font-weight: 600;
+        margin-top: 10px; }
+        /* line 155, modal.scss */
+        body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .btn:hover {
+          background-color: RGB(202, 204, 205);
+          background-image: -moz-linear-gradient(RGB(242, 246, 245) 0%, RGB(158, 159, 161) 100%);
+          background-image: -webkit-linear-gradient(RGB(242, 246, 245) 0%, RGB(158, 159, 161) 100%);
+          background-image: -ms-linear-gradient(RGB(242, 246, 245) 0%, RGB(158, 159, 161) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(242, 246, 245)', endColorstr='RGB(158, 159, 161)');
+          color: #363636; }
+        /* line 159, modal.scss */
+        body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body .btn:active {
+          -webkit-box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0px 1px 2px 2px rgba(0, 0, 0, 0.4);
+          -webkit-transition: all 0.08s ease-in-out;
+          -moz-transition: all 0.08s ease-in-out;
+          -o-transition: all 0.08s ease-in-out;
+          transition: all 0.08s ease-in-out; }
+      /* line 164, modal.scss */
+      body.modal-open .outter-wrapper.modal-wrapper .inner-wrapper main.container.modal-body.out {
+        -webkit-animation: modalOut .1s cubic-bezier(.17,.67,.39,.9) forwards;
+        -moz-animation: modalOut .1s cubic-bezier(.17,.67,.39,.9) forwards;
+        -ms-animation: modalOut .1s cubic-bezier(.17,.67,.39,.9) forwards;
+        -o-animation: modalOut .1s cubic-bezier(.17,.67,.39,.9) forwards;
+        animation: modalOut .1s cubic-bezier(.17,.67,.39,.9) forwards; }
+
+/* Animacja */
+@-webkit-keyframes modalIn {
+  0% {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  80% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); } }
+@-moz-keyframes modalIn {
+  0% {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  80% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); } }
+@-ms-keyframes modalIn {
+  0% {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  80% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); } }
+@-o-keyframes modalIn {
+  0% {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  80% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); } }
+@keyframes modalIn {
+  0% {
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); }
+  80% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); } }
+@-webkit-keyframes modalOut {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); }
+  80% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+@-moz-keyframes modalOut {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); }
+  80% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+@-ms-keyframes modalOut {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); }
+  80% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+@-o-keyframes modalOut {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); }
+  80% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+@keyframes modalOut {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0, -100px);
+    -o-transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px); }
+  80% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0); } }
+
+/*# sourceMappingURL=modal.css.map */

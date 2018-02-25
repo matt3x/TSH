@@ -1,0 +1,185 @@
+/*
+ by Mateusz Major
+*/
+@import 'mixins.scss';
+
+body { 
+			
+	.outter-wrapper {
+		@include transition(background .1s ease-in-out);
+		&.modal-wrapper{ 
+			display: none;
+		}
+		.inner-wrapper {
+			main.form_bg_surround  {
+				@include opacity(1);
+				@include transition(transform .20s cubic-bezier(.17,.67,.39,.9), opacity .05s ease-in-out);
+			}
+		}
+	}	
+	&.modal-open{
+		.outter-wrapper {
+			@media #{$max-md} {
+				background: rgba(0,0,0,.6);
+				@include transition-delay (.1s);
+			}
+		}
+		.outter-wrapper:not(.modal-wrapper) {
+			@media #{$min-md} {
+				background: rgba(0,0,0,.7);
+				@include transition-delay (.1s);
+			}
+			@include transition(background .5s ease-in-out);
+			.inner-wrapper {
+				main.form_bg_surround  {
+					@media #{$max-md} {
+						@include opacity(.25);
+						@include transition(opacity .4s ease-in-out);
+					}
+					@media #{$min-md} {
+						@include scale(0.8);
+						@include opacity(.4);
+						@include transition(transform .35s cubic-bezier(.17,.67,.39,.9), opacity .4s ease-in-out);
+					}
+				}
+			}
+		}
+		.outter-wrapper.modal-wrapper{
+			display: table;
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 100;
+			width: 100%;
+			width: 100vw;
+			height: 100%;
+			height: 100vh;
+			cursor: pointer;
+			.inner-wrapper {
+				vertical-align: middle;
+				main.container.modal-body {
+					max-width: 830px;
+					background: #fff;
+					min-height: 420px;
+					margin-top: 250px;
+					padding: 25px;
+					@include border-radius(4px);
+					@include box-shadow(0px 2px 18px rgba(0, 0, 0, 0.55));
+					@include opacity(0);
+					@include animation('modalIn .3s cubic-bezier(.17,.67,.39,.9) forwards');
+					text-align: center;
+					@media #{$max-md} {
+						@include border-radius(8px);
+						padding-top: 20px;
+						min-height: 200px;
+						margin: 150px auto 0;
+						width: calc(100% - 40px);
+						max-width: 700px;
+					}
+						.table {
+							display: table;
+							height: 300px;
+							width: 100%;
+							@media #{$max-md} {
+								height: auto;
+								min-height: 0px;
+							}
+							.table-cell {
+								display: table-cell;
+								height: 100%;
+								width: 100%;
+								vertical-align: middle;
+								@media #{$max-xs} {
+									vertical-align: top;
+									height: auto;
+								}
+								h2 {
+									font-size: 36px;
+									font-family: "Source Sans Pro";
+									font-weight: 300;
+									color: #2288b7;
+									padding: 30px 0;
+									@media #{$max-md} {
+										font-size: 26px;
+										padding: 20px 0;
+									}
+								}
+								#modal-data {
+									color: rgb(102, 102, 102);
+									max-width: 600px;
+									margin: 0 auto;
+									div[class^='col'] {
+										&:nth-child(1) { 
+											& > div {
+												line-height: 31px;
+												height: 31px;
+											}
+											@media #{$max-xs} {
+												border-top: solid 1px #e0e0e0;
+												padding-top: 15px;
+												border-bottom: solid 1px #e0e0e0;
+												padding-bottom: 10px;
+												margin-bottom: 10px;
+											}
+										}
+										&:nth-child(2) {
+											border-left: solid 1px #e0e0e0;
+											border-right: solid 1px #e0e0e0;
+											@media #{$max-xs} {
+												border-left: none;
+												border-right: none;
+											}
+										}
+									}
+									@include rating;
+									h3 {
+										font-family: "Source Sans Pro";
+										font-weight: 400;
+										color: rgb(59, 59, 59);
+									}
+								}
+							}
+						}
+					.btn {
+						width: 100px;
+						height: 30px;
+						padding: 0 15px;
+						@include border-radius(4px);
+						@include background(RGB(215, 215, 215),  RGB(242, 242, 242), RGB(196, 196, 196));
+						line-height: 30px;
+						text-align: center;
+						border: none;
+						color: rgb(73, 73, 73);
+						font-weight:  600;
+						margin-top: 10px;
+						&:hover {
+							@include background(RGB(202, 204, 205), RGB(242, 246, 245), RGB(158, 159, 161));
+							color: #363636;
+						}
+						&:active {
+							@include box-shadow(inset 0px 1px 2px 2px rgba(0, 0, 0, 0.4));
+							@include transition(all .08s ease-in-out);
+						}
+					}
+					&.out {
+						@include animation('modalOut .1s cubic-bezier(.17,.67,.39,.9) forwards');
+					}
+				}
+			}
+
+		}
+	}
+}
+
+/* Animacja */
+
+@include keyframes(modalIn) {
+	0% {@include translate(0, 0)}
+	80% {@include opacity(1)}
+	100% {@include opacity(1); @include translate(0, -100px)}
+}
+@include keyframes(modalOut) {
+	0% {@include opacity(1);  @include translate(0, -100px)}
+	80% {@include opacity(0)}
+	100% {@include opacity(0);@include translate(0, 0) }
+}

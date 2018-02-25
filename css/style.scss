@@ -1,0 +1,461 @@
+/*
+ by Mateusz Major
+*/
+
+@import 'mixins.scss';
+
+body, html {
+height: 100%;
+height: 100vh;
+background: #DEDDDD url(../img/bg.png) repeat center;
+font-family: 'Helvetica', 'Source Sans Pro', sans-serif;
+font-size: 12px;
+color: #3b3b3b;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+	@media #{$max-md} {
+		background: #fff;
+	}
+
+strong {font-weight: 600;}
+input, button {@include noappearance}
+.invisible {display: none;}
+	
+.outter-wrapper {
+	height: 100%;
+	height: 100vh;
+	width: 100%;
+	display: table;
+	.inner-wrapper {
+		display: table-cell;
+		height: 100%;
+		height: 100vh;
+		vertical-align: middle;
+			@media #{$max-md} {
+				vertical-align: top;
+			}
+		main.form_bg_surround  {
+			max-width: 994px;
+			background-color: rgba(0, 0, 0, 0.051);
+			padding: 7px;
+				@media #{$max-md} {
+					background-color: transparent;
+					padding: 0px;
+				}
+			@include border-radius(5px);
+			.form_bg_base {
+				padding: 20px;
+				background-color: rgb(253, 253, 253);
+				@include border-radius(4px);
+				@include box-shadow(0px 1px 4px 0px rgba(0, 0, 0, 0.3));
+				@media #{$max-md} {
+					padding: 10px 10px 20px;
+					@include border-radius(0px);
+					@include box-shadow(none);
+					min-height: 100vh;
+				}
+				
+		   /*
+			*  Now thats it for layout, let's style main header
+			*/
+				header.form_bg_base_header {
+					border-bottom: solid 1px #dad9d7;
+					text-align: center;
+					@include nonselectable;
+
+					h1 {
+						font-size: 60px;
+						font-family: "Source Sans Pro";
+						font-weight: 300;
+						color: rgb(34, 136, 183);
+						@media #{$max-md} {
+							font-size: 32px;
+						}
+					}
+					p {
+						font-weight: 400;
+						font-size: 17px;
+						font-family: "Source Sans Pro";
+						color: rgb(59, 59, 59);
+						line-height: 1.182;
+						margin-bottom: 30px;
+						@media #{$max-md} {
+							font-size: 14px;
+							max-width: 360px;
+							margin: 5px auto 20px
+						}
+					}
+				}
+			
+		   /*
+			*  Lets play with form
+			*/
+				form#form {
+					padding: 17px 0;
+					max-width: 714px;
+					margin: 0 auto;
+					div[class^='col'] {
+						padding: 0 5px;
+						@media #{$max-md} {
+							& > * {margin-bottom: 15px;}
+						}
+					}
+					input[type=text] {
+						@include border-radius(4px);
+						background: #fff;
+						@include box-shadow(inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004));
+						line-height: 30px;
+						border: solid 1px #d6d6d6;
+						width: 100%;
+						line-height: 28px;
+						height: 30px;
+						padding: 0 10px;
+						color: #000;
+						@include transition(all .2s ease-in-out);
+						@include placeholder {
+							color: #999999;
+							@include opacity(1);
+						}
+						@media #{$max-sm} {
+							line-height: 35px;
+							padding: 5px 10px;
+							height: 45px;
+						}
+						&:hover, &:focus {
+							border-color: RGB(63, 136, 241);
+							@include transition(all .2s ease-in-out);
+						}
+					}
+					.btn{
+						width: calc(50% - 5px);
+						height: 30px;
+						padding: 0 15px;
+						@include border-radius(4px);
+						@include background(RGB(215, 215, 215), RGB(242, 242, 242), RGB(196, 196, 196),);
+						line-height: 30px;
+						text-align: center;
+						border: none;
+						color: rgb(73, 73, 73);
+						font-weight:  600;
+						@include transition(all .2s ease-in-out);
+						&.btn-reset {
+							margin-right: 10px;
+							&:hover {
+								@include background(RGB(202, 204, 205), RGB(242, 246, 245), RGB(158, 159, 161));
+								color: #363636;
+							}
+							&:active {
+								@include box-shadow(inset 0px 3px 4px rgba(0, 0, 0, 0.4));
+								@include transition(all .08s ease-in-out);
+							}
+						}
+						&.btn-primary {
+							color: #fff;
+							@include background(RGB(63, 136, 241), rgb(107,161,243), rgb(31,118,240));
+							&:hover {
+								@include background(RGB(61, 125, 216), rgb(113,189,255), rgb(31,79,253));
+								color: #fff;
+							}
+							&:active {
+								@include box-shadow(inset 0px 3px 4px rgba(0, 0, 0, 0.4));
+								@include transition(all .08s ease-in-out);
+							}
+						}
+						&.selectbox {
+							width: 100%;
+							padding: 0 6px;
+							select {
+								display: inline-block;
+								height: 16px;
+								width: 100%;
+								line-height: 16px;
+								outline: none!important;
+								@include box-shadow(none!important);
+							}
+						}
+						@media #{$max-sm} {
+							height: 45px;
+							line-height: 45px;
+							&.selectbox {
+								select {
+									line-height: 33px;
+									height: 33px;
+								}
+							}
+						}
+					}
+				}
+				
+		   /*
+			*  Main content
+			*/
+				section.content {
+					min-height: 310px;
+					@include border-radius(4px);
+					background-color: RGBA(253, 253, 253, 1.00);
+					@include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.08),inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004));
+					border: solid 1px RGB(214, 214, 214);
+					border-right-color: RGB(209, 209, 209);
+					border-left-color: RGB(209, 209, 209);
+					border-bottom-color: RGB(203, 203, 203);
+					margin-bottom: 20px;
+					@media #{$max-sm} { 
+						min-height: 0;
+					}
+					header {
+						text-align: center;
+						@include  border-radius-detailed(4px, 0, 0, 4px);
+						border-bottom: solid 1px #CCCFD1;
+						background-color: #EAEBEC;
+						@include box-shadow(0px 1px 1px 0px rgba(0, 0, 0, 0.05),inset 0px 1px 1px rgba(255, 255, 255, 0.3));
+						line-height: 58px;
+						padding: 0 15px;
+						font-size: 12px;
+						color: rgb(102, 102, 102);
+						font-weight: 600;
+						@include background(RGB(234, 235, 236), RGB(236, 237, 238), RGB(232, 233, 234));
+						text-shadow: 0px 1px rgba(255, 255, 255, .7);
+						div[class^='col'] {
+							padding-left: 5px;
+							padding-right: 5px;
+							@media #{$min-xs} and #{$max-sm} {
+								line-height: 35px;
+							}
+								&:first-child {
+									text-align: left;
+									padding-left: 30px;
+									@include bootstrap-col-overrides ($md, 58.5%);
+									@media #{$min-xs} and #{$max-sm} {
+										padding-left: 15px;
+									}
+									@media #{$max-xs} {
+										padding: 0 10px;
+										text-align: center;
+										.invisible {
+										    visibility: visible!important;
+										    display: inline;
+										}
+									}
+								}
+								&:nth-child(2) {
+									@include bootstrap-col-overrides ($md, 19.1%);
+									@media #{$min-xs} and #{$max-sm} {
+										padding-left: 15px;
+										text-align: left;
+									}
+									@media #{$max-xs} {
+										display: none;
+									}
+								}
+								&:nth-child(3), &:last-child {
+									@include bootstrap-col-overrides ($md, 11.2%);
+									@media #{$max-xs} {
+										display: none;
+									}
+								}
+						}
+					}
+					#data {
+						width: 100%;
+						figure {
+							&.row {
+								font-size: 12px;
+								color: rgb(85, 85, 85);
+								margin: 0;
+								border-bottom: solid 1px #e0e0e0;
+								cursor: pointer;
+								&:nth-of-type(5) {
+									border-bottom: none;
+								}
+								&:nth-child(even) {
+									@include background(RGB(247, 247, 247), RGB(248, 248, 248), RGB(246, 246, 246));
+								}
+								&:last-child {
+										@media #{$max-sm} {
+											border-bottom: none;
+										}
+									}
+								&:hover {
+									background: RGBA(240, 246, 250, 1.00);
+									&:last-child {
+										@include border-radius-detailed(0, 4px, 4px, 0);
+									}
+								}
+								div[class^='col'] {
+									padding-left: 10px;
+									padding-right: 10px;
+									text-align: center;
+									line-height: 49px;
+									border-right: solid 1px #e0e0e0;
+										&:first-child {
+											text-align: left;
+											padding-left: 30px;
+											@include bootstrap-col-overrides ($md, 58.5%);
+											@media #{$min-xs} and #{$max-sm} {
+												border-bottom: solid 1px #e0e0e0;
+												padding-left: 15px;
+											}
+											@media #{$max-xs} {
+												padding: 15px;
+												border-bottom: solid 1px RGBA(224, 224, 224, .5);
+												border-right: none;
+												text-align: center;
+												font-size: 15px;
+												line-height: 1.3;
+												min-height: 50px;
+											}
+										}
+										&:nth-child(2) {
+											@include bootstrap-col-overrides ($md, 19.1%);
+											@media #{$min-xs} and #{$max-sm} {
+												padding-left: 15px;
+												text-align: left;
+											}
+											@media #{$max-xs} {
+												border-bottom: solid 1px RGBA(224, 224, 224, .5);
+												border-right: none;
+											}
+										}
+										&:nth-child(3) {
+											@include bootstrap-col-overrides ($md, 11.2%);
+											@media #{$min-xs} and #{$max-sm} {
+												border-right: none;
+												border-bottom: solid 1px #e0e0e0;
+											}
+											@media #{$max-xs} {
+												border-right: solid 1px RGBA(224, 224, 224, .5);
+												.invisible {
+												  visibility: visible!important;
+												  @include opacity(.55);
+												  display: inline;		
+												}
+											}
+
+										}
+										&:last-child {
+											@include bootstrap-col-overrides ($md, 11.2%);
+											border-right: none;
+											@media #{$max-xs} {
+												.invisible {
+												  visibility: visible!important;
+												  @include opacity(.55);
+												  display: inline;
+												}
+											}
+										}
+								}
+								@include rating;
+							}
+							&.sys-alert {
+								display: table;
+								width: 100%; 
+								height: 234px;
+								@include animation('fadeIn .15s ease-in-out forwards');
+								.inner {
+									display: table-cell;
+									vertical-align: middle;
+									text-align: center;
+									font-family: "Source Sans Pro";
+									font-size: 14px;
+									h2 {color: #666;}
+									strong {cursor: pointer; color: #2077F0;}
+
+								}
+							}
+						}
+					}
+				}
+				
+		   /*
+			*  Pagination
+			*/	
+				section.pagination {
+					min-height: 25px;
+					ul#pagination  {
+						list-style-type: none;
+						padding: 0;
+						display: none;
+						margin: 0 auto;
+						@include nonselectable;
+						li {
+							display: inline-block;
+							&:nth-child(2) {
+								@media #{$max-xs} {display: none};
+							}
+							&.prev, &.next, ul > li {
+								display: inline-block;
+								width: 25px;
+								height: 25px;
+								@include border-radius(3px);
+								@include background(RGB(246, 246, 246), rgb(255,255,255), RGBA(237, 237, 237, 1.00));
+								@include box-shadow(0px 1px 1px 0px rgba(0, 0, 0, 0.12),inset 0px 1px 0px 1px rgba(255, 255, 255, 0.004));
+								line-height: 25px; 
+								text-align: center;
+								margin-right: 5px;
+								border: solid 1px RGB(202, 202, 202);
+								border-right-color: RGB(188, 188, 188);
+								border-left-color: RGB(188, 188, 188);
+								border-bottom-color: RGB(174, 174, 174);
+								font-size: 12px;
+								color: rgb(113, 113, 113);
+								font-weight: 600;
+								text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+								cursor: pointer;
+								@media #{$min-xs} and #{$max-sm} {
+									margin-right: 10px;
+									width: 35px;
+									height: 35px;
+									line-height: 35px;
+								}
+								@media #{$max-xs} {
+									width: 46px;
+									height: 46px;
+									line-height: 46px;
+									font-size: 20px; 
+									margin: 0 6px;
+								}
+								&.next {
+									margin-right: 0;
+								}
+								&.active {
+									background: RGBA(103, 103, 103, 1.00);
+									@include box-shadow(0px 1px 0px 0px rgba(255, 255, 255, 0.004),inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4));
+									border-color: RGBA(80, 80, 80, 1.00);
+									color: rgb(242, 242, 242);
+									text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.13);
+								}
+								&:not(.active):hover {
+									color: rgb(253, 253, 253);
+									@include background(RGB(97, 180, 228), RGB(106, 193, 232), RGB(82, 154, 218));
+								}
+								&[disabled] {
+									background: RGB(248, 248, 248);
+									border-color: RGB(236, 237, 238);
+									color: #999;
+									@include box-shadow(none);
+									cursor: default;
+									pointer-events: none;
+								}
+							}
+							ul{
+								list-style-type: none;
+								padding: 0;
+							}
+						}
+					}
+				}
+				
+				
+				
+			}
+		}
+	}
+}
+}
+
+/* Animacja */
+
+@include keyframes(fadeIn) {
+	0% { @include opacity(0)}
+	100% { @include opacity(1)}
+}

@@ -1,0 +1,726 @@
+/*
+ by Mateusz Major
+*/
+/* Theres no other gradient direction so I do not bother of its unchangable degree value */
+/* First color is for browser that don't support gradinets, why? start is too light, stop is too dark, the right spot is somewhere in the middle */
+/* line 7, style.scss */
+body, html {
+  height: 100%;
+  height: 100vh;
+  background: #DEDDDD url(../img/bg.png) repeat center;
+  font-family: 'Helvetica', 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  @media (max-width: 991px) {
+    /* line 7, style.scss */
+    body, html {
+      background: #fff; } }
+  /* line 20, style.scss */
+  body strong, html strong {
+    font-weight: 600; }
+  /* line 21, style.scss */
+  body input, body button, html input, html button {
+    outline: none !important;
+    -webkit-appearance: none; }
+  /* line 22, style.scss */
+  body .invisible, html .invisible {
+    display: none; }
+  /* line 24, style.scss */
+  body .outter-wrapper, html .outter-wrapper {
+    height: 100%;
+    height: 100vh;
+    width: 100%;
+    display: table; }
+    /* line 29, style.scss */
+    body .outter-wrapper .inner-wrapper, html .outter-wrapper .inner-wrapper {
+      display: table-cell;
+      height: 100%;
+      height: 100vh;
+      vertical-align: middle; }
+      @media (max-width: 991px) {
+        /* line 29, style.scss */
+        body .outter-wrapper .inner-wrapper, html .outter-wrapper .inner-wrapper {
+          vertical-align: top; } }
+      /* line 37, style.scss */
+      body .outter-wrapper .inner-wrapper main.form_bg_surround, html .outter-wrapper .inner-wrapper main.form_bg_surround {
+        max-width: 994px;
+        background-color: rgba(0, 0, 0, 0.051);
+        padding: 7px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+        @media (max-width: 991px) {
+          /* line 37, style.scss */
+          body .outter-wrapper .inner-wrapper main.form_bg_surround, html .outter-wrapper .inner-wrapper main.form_bg_surround {
+            background-color: transparent;
+            padding: 0px; } }
+        /* line 46, style.scss */
+        body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base {
+          padding: 20px;
+          background-color: #fdfdfd;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          border-radius: 4px;
+          -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.3);
+       /*
+    	*  Now thats it for layout, let's style main header
+    	*/
+       /*
+    	*  Lets play with form
+    	*/
+       /*
+    	*  Main content
+    	*/
+       /*
+    	*  Pagination
+    	*/ }
+          @media (max-width: 991px) {
+            /* line 46, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base {
+              padding: 10px 10px 20px;
+              -webkit-border-radius: 0px;
+              -moz-border-radius: 0px;
+              border-radius: 0px;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              min-height: 100vh; } }
+          /* line 61, style.scss */
+          body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header {
+            border-bottom: solid 1px #dad9d7;
+            text-align: center;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none; }
+            /* line 66, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header h1, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header h1 {
+              font-size: 60px;
+              font-family: "Source Sans Pro";
+              font-weight: 300;
+              color: #2288b7; }
+              @media (max-width: 991px) {
+                /* line 66, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header h1, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header h1 {
+                  font-size: 32px; } }
+            /* line 75, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header p, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header p {
+              font-weight: 400;
+              font-size: 17px;
+              font-family: "Source Sans Pro";
+              color: #3b3b3b;
+              line-height: 1.182;
+              margin-bottom: 30px; }
+              @media (max-width: 991px) {
+                /* line 75, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header p, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base header.form_bg_base_header p {
+                  font-size: 14px;
+                  max-width: 360px;
+                  margin: 5px auto 20px; } }
+          /* line 93, style.scss */
+          body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form {
+            padding: 17px 0;
+            max-width: 714px;
+            margin: 0 auto; }
+            /* line 97, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form div[class^='col'], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form div[class^='col'] {
+              padding: 0 5px; }
+              @media (max-width: 991px) {
+                /* line 100, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form div[class^='col'] > *, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form div[class^='col'] > * {
+                  margin-bottom: 15px; } }
+            /* line 103, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text] {
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              border-radius: 4px;
+              background: #fff;
+              -webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+              -moz-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+              box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+              line-height: 30px;
+              border: solid 1px #d6d6d6;
+              width: 100%;
+              line-height: 28px;
+              height: 30px;
+              padding: 0 10px;
+              color: #000;
+              -webkit-transition: all 0.2s ease-in-out;
+              -moz-transition: all 0.2s ease-in-out;
+              -o-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out; }
+              /* line 87, mixins.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]::-webkit-input-placeholder, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]::-webkit-input-placeholder {
+                color: #999999;
+                opacity: 1;
+                filter: alpha(opacity=100); }
+              /* line 88, mixins.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:-moz-placeholder, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:-moz-placeholder {
+                color: #999999;
+                opacity: 1;
+                filter: alpha(opacity=100); }
+              /* line 89, mixins.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]::-moz-placeholder, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]::-moz-placeholder {
+                color: #999999;
+                opacity: 1;
+                filter: alpha(opacity=100); }
+              /* line 90, mixins.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:-ms-input-placeholder, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:-ms-input-placeholder {
+                color: #999999;
+                opacity: 1;
+                filter: alpha(opacity=100); }
+              @media (max-width: 767px) {
+                /* line 103, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text] {
+                  line-height: 35px;
+                  padding: 5px 10px;
+                  height: 45px; } }
+              /* line 124, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:hover, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:focus, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form input[type=text]:focus {
+                border-color: RGB(63, 136, 241);
+                -webkit-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out; }
+            /* line 129, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn {
+              width: calc(50% - 5px);
+              height: 30px;
+              padding: 0 15px;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              border-radius: 4px;
+              background-color: RGB(215, 215, 215);
+              background-image: -moz-linear-gradient(RGB(242, 242, 242) 0%, RGB(196, 196, 196) 100%);
+              background-image: -webkit-linear-gradient(RGB(242, 242, 242) 0%, RGB(196, 196, 196) 100%);
+              background-image: -ms-linear-gradient(RGB(242, 242, 242) 0%, RGB(196, 196, 196) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(242, 242, 242)', endColorstr='RGB(196, 196, 196)');
+              line-height: 30px;
+              text-align: center;
+              border: none;
+              color: #494949;
+              font-weight: 600;
+              -webkit-transition: all 0.2s ease-in-out;
+              -moz-transition: all 0.2s ease-in-out;
+              -o-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out; }
+              /* line 141, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-reset, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-reset {
+                margin-right: 10px; }
+                /* line 143, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-reset:hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-reset:hover {
+                  background-color: RGB(202, 204, 205);
+                  background-image: -moz-linear-gradient(RGB(242, 246, 245) 0%, RGB(158, 159, 161) 100%);
+                  background-image: -webkit-linear-gradient(RGB(242, 246, 245) 0%, RGB(158, 159, 161) 100%);
+                  background-image: -ms-linear-gradient(RGB(242, 246, 245) 0%, RGB(158, 159, 161) 100%);
+                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(242, 246, 245)', endColorstr='RGB(158, 159, 161)');
+                  color: #363636; }
+                /* line 147, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-reset:active, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-reset:active {
+                  -webkit-box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.4);
+                  -moz-box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.4);
+                  box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.4);
+                  -webkit-transition: all 0.08s ease-in-out;
+                  -moz-transition: all 0.08s ease-in-out;
+                  -o-transition: all 0.08s ease-in-out;
+                  transition: all 0.08s ease-in-out; }
+              /* line 152, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-primary, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-primary {
+                color: #fff;
+                background-color: RGB(63, 136, 241);
+                background-image: -moz-linear-gradient(#6ba1f3 0%, #1f76f0 100%);
+                background-image: -webkit-linear-gradient(#6ba1f3 0%, #1f76f0 100%);
+                background-image: -ms-linear-gradient(#6ba1f3 0%, #1f76f0 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ba1f3', endColorstr='#1f76f0'); }
+                /* line 155, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-primary:hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-primary:hover {
+                  background-color: RGB(61, 125, 216);
+                  background-image: -moz-linear-gradient(#71bdff 0%, #1f4ffd 100%);
+                  background-image: -webkit-linear-gradient(#71bdff 0%, #1f4ffd 100%);
+                  background-image: -ms-linear-gradient(#71bdff 0%, #1f4ffd 100%);
+                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71bdff', endColorstr='#1f4ffd');
+                  color: #fff; }
+                /* line 159, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-primary:active, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.btn-primary:active {
+                  -webkit-box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.4);
+                  -moz-box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.4);
+                  box-shadow: inset 0px 3px 4px rgba(0, 0, 0, 0.4);
+                  -webkit-transition: all 0.08s ease-in-out;
+                  -moz-transition: all 0.08s ease-in-out;
+                  -o-transition: all 0.08s ease-in-out;
+                  transition: all 0.08s ease-in-out; }
+              /* line 164, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.selectbox, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.selectbox {
+                width: 100%;
+                padding: 0 6px; }
+                /* line 167, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.selectbox select, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.selectbox select {
+                  display: inline-block;
+                  height: 16px;
+                  width: 100%;
+                  line-height: 16px;
+                  outline: none !important;
+                  -webkit-box-shadow: none !important;
+                  -moz-box-shadow: none !important;
+                  box-shadow: none !important; }
+              @media (max-width: 767px) {
+                /* line 129, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn {
+                  height: 45px;
+                  line-height: 45px; }
+                  /* line 180, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.selectbox select, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base form#form .btn.selectbox select {
+                    line-height: 33px;
+                    height: 33px; } }
+          /* line 192, style.scss */
+          body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content {
+            min-height: 310px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            background-color: RGBA(253, 253, 253, 1);
+            -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+            -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+            border: solid 1px RGB(214, 214, 214);
+            border-right-color: RGB(209, 209, 209);
+            border-left-color: RGB(209, 209, 209);
+            border-bottom-color: RGB(203, 203, 203);
+            margin-bottom: 20px; }
+            @media (max-width: 767px) {
+              /* line 192, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content {
+                min-height: 0; } }
+            /* line 205, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header {
+              text-align: center;
+              -webkit-border-top-right-radius: 4px;
+              -webkit-border-bottom-right-radius: 0;
+              -webkit-border-bottom-left-radius: 0;
+              -webkit-border-top-left-radius: 4px;
+              -moz-border-radius-topright: 4px;
+              -moz-border-radius-bottomright: 0;
+              -moz-border-radius-bottomleft: 0;
+              -moz-border-radius-topleft: 4px;
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 0;
+              border-bottom-left-radius: 0;
+              border-top-left-radius: 4px;
+              border-bottom: solid 1px #CCCFD1;
+              background-color: #EAEBEC;
+              -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+              -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+              box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), inset 0px 1px 1px rgba(255, 255, 255, 0.3);
+              line-height: 58px;
+              padding: 0 15px;
+              font-size: 12px;
+              color: #666666;
+              font-weight: 600;
+              background-color: RGB(234, 235, 236);
+              background-image: -moz-linear-gradient(RGB(236, 237, 238) 0%, RGB(232, 233, 234) 100%);
+              background-image: -webkit-linear-gradient(RGB(236, 237, 238) 0%, RGB(232, 233, 234) 100%);
+              background-image: -ms-linear-gradient(RGB(236, 237, 238) 0%, RGB(232, 233, 234) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(236, 237, 238)', endColorstr='RGB(232, 233, 234)');
+              text-shadow: 0px 1px rgba(255, 255, 255, 0.7); }
+              /* line 218, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col'], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col'] {
+                padding-left: 5px;
+                padding-right: 5px; }
+                @media (min-width: 576px) and (max-width: 767px) {
+                  /* line 218, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col'], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col'] {
+                    line-height: 35px; } }
+                /* line 224, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child {
+                  text-align: left;
+                  padding-left: 30px; }
+                  @media only screen and (min-width: 991px) {
+                    /* line 224, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child {
+                      flex: 0 0 58.5%;
+                      -ms-flex: 0 0 58.5%;
+                      -webkit-flex: 0 0 58.5%;
+                      max-width: 58.5%; } }
+                  @media (min-width: 576px) and (max-width: 767px) {
+                    /* line 224, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child {
+                      padding-left: 15px; } }
+                  @media (max-width: 576px) {
+                    /* line 224, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child {
+                      padding: 0 10px;
+                      text-align: center; }
+                      /* line 234, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child .invisible, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:first-child .invisible {
+                        visibility: visible !important;
+                        display: inline; } }
+                @media only screen and (min-width: 991px) {
+                  /* line 240, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(2) {
+                    flex: 0 0 19.1%;
+                    -ms-flex: 0 0 19.1%;
+                    -webkit-flex: 0 0 19.1%;
+                    max-width: 19.1%; } }
+                @media (min-width: 576px) and (max-width: 767px) {
+                  /* line 240, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(2) {
+                    padding-left: 15px;
+                    text-align: left; } }
+                @media (max-width: 576px) {
+                  /* line 240, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(2) {
+                    display: none; } }
+                @media only screen and (min-width: 991px) {
+                  /* line 250, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(3), body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:last-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(3), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:last-child {
+                    flex: 0 0 11.2%;
+                    -ms-flex: 0 0 11.2%;
+                    -webkit-flex: 0 0 11.2%;
+                    max-width: 11.2%; } }
+                @media (max-width: 576px) {
+                  /* line 250, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(3), body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:last-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:nth-child(3), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content header div[class^='col']:last-child {
+                    display: none; } }
+            /* line 258, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data {
+              width: 100%; }
+              /* line 261, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row {
+                font-size: 12px;
+                color: #555555;
+                margin: 0;
+                border-bottom: solid 1px #e0e0e0;
+                cursor: pointer; }
+                /* line 267, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:nth-of-type(5), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:nth-of-type(5) {
+                  border-bottom: none; }
+                /* line 270, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:nth-child(even), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:nth-child(even) {
+                  background-color: RGB(247, 247, 247);
+                  background-image: -moz-linear-gradient(RGB(248, 248, 248) 0%, RGB(246, 246, 246) 100%);
+                  background-image: -webkit-linear-gradient(RGB(248, 248, 248) 0%, RGB(246, 246, 246) 100%);
+                  background-image: -ms-linear-gradient(RGB(248, 248, 248) 0%, RGB(246, 246, 246) 100%);
+                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(248, 248, 248)', endColorstr='RGB(246, 246, 246)'); }
+                @media (max-width: 767px) {
+                  /* line 273, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:last-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:last-child {
+                    border-bottom: none; } }
+                /* line 278, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:hover {
+                  background: RGBA(240, 246, 250, 1); }
+                  /* line 280, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:hover:last-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row:hover:last-child {
+                    -webkit-border-top-right-radius: 0;
+                    -webkit-border-bottom-right-radius: 4px;
+                    -webkit-border-bottom-left-radius: 4px;
+                    -webkit-border-top-left-radius: 0;
+                    -moz-border-radius-topright: 0;
+                    -moz-border-radius-bottomright: 4px;
+                    -moz-border-radius-bottomleft: 4px;
+                    -moz-border-radius-topleft: 0;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                    border-top-left-radius: 0; }
+                /* line 284, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col'], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col'] {
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  text-align: center;
+                  line-height: 49px;
+                  border-right: solid 1px #e0e0e0; }
+                  /* line 290, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child {
+                    text-align: left;
+                    padding-left: 30px; }
+                    @media only screen and (min-width: 991px) {
+                      /* line 290, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child {
+                        flex: 0 0 58.5%;
+                        -ms-flex: 0 0 58.5%;
+                        -webkit-flex: 0 0 58.5%;
+                        max-width: 58.5%; } }
+                    @media (min-width: 576px) and (max-width: 767px) {
+                      /* line 290, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child {
+                        border-bottom: solid 1px #e0e0e0;
+                        padding-left: 15px; } }
+                    @media (max-width: 576px) {
+                      /* line 290, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:first-child {
+                        padding: 15px;
+                        border-bottom: solid 1px RGBA(224, 224, 224, 0.5);
+                        border-right: none;
+                        text-align: center;
+                        font-size: 15px;
+                        line-height: 1.3;
+                        min-height: 50px; } }
+                  @media only screen and (min-width: 991px) {
+                    /* line 308, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(2) {
+                      flex: 0 0 19.1%;
+                      -ms-flex: 0 0 19.1%;
+                      -webkit-flex: 0 0 19.1%;
+                      max-width: 19.1%; } }
+                  @media (min-width: 576px) and (max-width: 767px) {
+                    /* line 308, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(2) {
+                      padding-left: 15px;
+                      text-align: left; } }
+                  @media (max-width: 576px) {
+                    /* line 308, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(2) {
+                      border-bottom: solid 1px RGBA(224, 224, 224, 0.5);
+                      border-right: none; } }
+                  @media only screen and (min-width: 991px) {
+                    /* line 319, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3) {
+                      flex: 0 0 11.2%;
+                      -ms-flex: 0 0 11.2%;
+                      -webkit-flex: 0 0 11.2%;
+                      max-width: 11.2%; } }
+                  @media (min-width: 576px) and (max-width: 767px) {
+                    /* line 319, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3) {
+                      border-right: none;
+                      border-bottom: solid 1px #e0e0e0; } }
+                  @media (max-width: 576px) {
+                    /* line 319, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3) {
+                      border-right: solid 1px RGBA(224, 224, 224, 0.5); }
+                      /* line 327, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3) .invisible, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:nth-child(3) .invisible {
+                        visibility: visible !important;
+                        opacity: 0.55;
+                        filter: alpha(opacity=55);
+                        display: inline; } }
+                  /* line 335, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:last-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:last-child {
+                    border-right: none; }
+                    @media only screen and (min-width: 991px) {
+                      /* line 335, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:last-child, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:last-child {
+                        flex: 0 0 11.2%;
+                        -ms-flex: 0 0 11.2%;
+                        -webkit-flex: 0 0 11.2%;
+                        max-width: 11.2%; } }
+                    @media (max-width: 576px) {
+                      /* line 339, style.scss */
+                      body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:last-child .invisible, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row div[class^='col']:last-child .invisible {
+                        visibility: visible !important;
+                        opacity: 0.55;
+                        filter: alpha(opacity=55);
+                        display: inline; } }
+                /* line 104, mixins.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating {
+                  display: block;
+                  list-style-type: none;
+                  padding: 0px;
+                  margin: 0; }
+                  /* line 109, mixins.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating li, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating li {
+                    display: inline-block;
+                    width: 26px;
+                    height: 26px;
+                    margin-right: 2px;
+                    -webkit-border-radius: 100%;
+                    -moz-border-radius: 100%;
+                    border-radius: 100%;
+                    line-height: 26px;
+                    text-align: center;
+                    font-size: 15px;
+                    /* Should be font weight 900 - Black - why isnt? Because I dont want to slow loading time for font weight used only once */
+                    font-weight: 600;
+                    background-color: RGB(242, 242, 242);
+                    background-image: -moz-linear-gradient(RGB(255, 255, 255) 0%, RGB(218, 220, 220) 100%);
+                    background-image: -webkit-linear-gradient(RGB(255, 255, 255) 0%, RGB(218, 220, 220) 100%);
+                    background-image: -ms-linear-gradient(RGB(255, 255, 255) 0%, RGB(218, 220, 220) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(255, 255, 255)', endColorstr='RGB(218, 220, 220)');
+                    -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+                    -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+                    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 1px 0px rgba(255, 255, 255, 0.004);
+                    color: #666666;
+                    border: solid 1px RGB(138, 138, 138);
+                    border-right-color: RGB(128, 128, 128);
+                    border-left-color: RGB(128, 128, 128);
+                    border-bottom-color: RGB(118, 118, 118); }
+                  /* line 128, mixins.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-1 li:nth-child(-n+1), body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-2 li:nth-child(-n+2), body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-3 li:nth-child(-n+3), body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-4 li:nth-child(-n+4), body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-5 li:nth-child(-n+5), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-1 li:nth-child(-n+1), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-2 li:nth-child(-n+2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-3 li:nth-child(-n+3), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-4 li:nth-child(-n+4), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.row ul.rating.rated-5 li:nth-child(-n+5) {
+                    background-color: RGB(97, 180, 228);
+                    background-image: -moz-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                    background-image: -webkit-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                    background-image: -ms-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(106, 193, 232)', endColorstr='RGB(82, 154, 218)');
+                    -webkit-box-shadow: 0px 1px 1px 0px rgba(81, 153, 218, 0.15), inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05);
+                    -moz-box-shadow: 0px 1px 1px 0px rgba(81, 153, 218, 0.15), inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05);
+                    box-shadow: 0px 1px 1px 0px rgba(81, 153, 218, 0.15), inset 0px 1px 1px 0px rgba(107, 193, 232, 0.05);
+                    color: #fdfdfd;
+                    text-align: center; }
+              /* line 349, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert {
+                display: table;
+                width: 100%;
+                height: 234px;
+                -webkit-animation: fadeIn .15s ease-in-out forwards;
+                -moz-animation: fadeIn .15s ease-in-out forwards;
+                -ms-animation: fadeIn .15s ease-in-out forwards;
+                -o-animation: fadeIn .15s ease-in-out forwards;
+                animation: fadeIn .15s ease-in-out forwards; }
+                /* line 354, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert .inner, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert .inner {
+                  display: table-cell;
+                  vertical-align: middle;
+                  text-align: center;
+                  font-family: "Source Sans Pro";
+                  font-size: 14px; }
+                  /* line 360, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert .inner h2, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert .inner h2 {
+                    color: #666; }
+                  /* line 361, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert .inner strong, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.content #data figure.sys-alert .inner strong {
+                    cursor: pointer;
+                    color: #2077F0; }
+          /* line 372, style.scss */
+          body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination {
+            min-height: 25px; }
+            /* line 374, style.scss */
+            body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination {
+              list-style-type: none;
+              padding: 0;
+              display: none;
+              margin: 0 auto;
+              -webkit-touch-callout: none;
+              -webkit-user-select: none;
+              -khtml-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none; }
+              /* line 380, style.scss */
+              body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li {
+                display: inline-block; }
+                @media (max-width: 576px) {
+                  /* line 382, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li:nth-child(2), html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li:nth-child(2) {
+                    display: none; } }
+                /* line 385, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li {
+                  display: inline-block;
+                  width: 25px;
+                  height: 25px;
+                  -webkit-border-radius: 3px;
+                  -moz-border-radius: 3px;
+                  border-radius: 3px;
+                  background-color: RGB(246, 246, 246);
+                  background-image: -moz-linear-gradient(white 0%, RGBA(237, 237, 237, 1) 100%);
+                  background-image: -webkit-linear-gradient(white 0%, RGBA(237, 237, 237, 1) 100%);
+                  background-image: -ms-linear-gradient(white 0%, RGBA(237, 237, 237, 1) 100%);
+                  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='RGBA(237, 237, 237, 1)');
+                  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), inset 0px 1px 0px 1px rgba(255, 255, 255, 0.004);
+                  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), inset 0px 1px 0px 1px rgba(255, 255, 255, 0.004);
+                  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), inset 0px 1px 0px 1px rgba(255, 255, 255, 0.004);
+                  line-height: 25px;
+                  text-align: center;
+                  margin-right: 5px;
+                  border: solid 1px RGB(202, 202, 202);
+                  border-right-color: RGB(188, 188, 188);
+                  border-left-color: RGB(188, 188, 188);
+                  border-bottom-color: RGB(174, 174, 174);
+                  font-size: 12px;
+                  color: #717171;
+                  font-weight: 600;
+                  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+                  cursor: pointer; }
+                  @media (min-width: 576px) and (max-width: 767px) {
+                    /* line 385, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li {
+                      margin-right: 10px;
+                      width: 35px;
+                      height: 35px;
+                      line-height: 35px; } }
+                  @media (max-width: 576px) {
+                    /* line 385, style.scss */
+                    body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li {
+                      width: 46px;
+                      height: 46px;
+                      line-height: 46px;
+                      font-size: 20px;
+                      margin: 0 6px; } }
+                  /* line 417, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev.next, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next.next, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li.next, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev.next, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next.next, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li.next {
+                    margin-right: 0; }
+                  /* line 420, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev.active, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next.active, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li.active, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev.active, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next.active, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li.active {
+                    background: RGBA(103, 103, 103, 1);
+                    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
+                    -moz-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004), inset 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
+                    border-color: RGBA(80, 80, 80, 1);
+                    color: #f2f2f2;
+                    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.13); }
+                  /* line 427, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev:not(.active):hover, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next:not(.active):hover, body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li:not(.active):hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev:not(.active):hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next:not(.active):hover, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li:not(.active):hover {
+                    color: #fdfdfd;
+                    background-color: RGB(97, 180, 228);
+                    background-image: -moz-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                    background-image: -webkit-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                    background-image: -ms-linear-gradient(RGB(106, 193, 232) 0%, RGB(82, 154, 218) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='RGB(106, 193, 232)', endColorstr='RGB(82, 154, 218)'); }
+                  /* line 431, style.scss */
+                  body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev[disabled], body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next[disabled], body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li[disabled], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.prev[disabled], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li.next[disabled], html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul > li[disabled] {
+                    background: RGB(248, 248, 248);
+                    border-color: RGB(236, 237, 238);
+                    color: #999;
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                    cursor: default;
+                    pointer-events: none; }
+                /* line 440, style.scss */
+                body .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul, html .outter-wrapper .inner-wrapper main.form_bg_surround .form_bg_base section.pagination ul#pagination li ul {
+                  list-style-type: none;
+                  padding: 0; }
+
+/* Animacja */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+
+/*# sourceMappingURL=style.css.map */
